@@ -79,11 +79,12 @@ function optionChanged(value)
                                        "<br> BBTYPE: " + row[0].bbtype +
                                        "<br> WFREQ: " + row[0].wfreq);
 
-    let samples = jsonData.samples.filter(element => (element.id == value));
-    console.log(samples[0].sample_values.slice(0, 10));
+    var samples = jsonData.samples.filter(element => (element.id == value));
+    var otu_ids = samples[0].otu_ids.slice(0, 10).map(element => "OTU" + element);
+    console.log(otu_ids);
     var trace = {
-        x: samples[0].sample_values.slice(0, 10),
-        y: samples[0].otu_ids.slice(0, 10),
+        x:samples[0].sample_values.slice(0, 10),
+        y: otu_ids,
         text: samples[0].otu_labels.slice(0, 10),
         type: "bar",
         orientation: 'h'
@@ -94,6 +95,7 @@ function optionChanged(value)
       // 7. Define our plot layout
       var layout = {
         title: "Top 10 Bacteria Cultures Found",
+        yaxis: {autorange:"reversed"}
       };
       
       // 8. Plot the chart to a div tag with id "bar-plot"
