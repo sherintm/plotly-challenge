@@ -57,7 +57,7 @@ function optionChanged(value)
           type: "indicator",
           mode: "gauge+number",
           gauge: {
-            axis: { range: [null, 9] },
+            axis: { range: [null, 9], tick0:0, dtick:1 },
             steps: [
               { range: [0, 1], color: "#d6f5f5" },
               { range: [1, 2], color: "#c2f0f0" },
