@@ -3,7 +3,7 @@ let dropDown = d3.select('#selDataset');
 let dropDownData;
 let jsonData;
 
-d3.json("../../samples.json").then((incomingData) => {
+d3.json("samples.json").then((incomingData) => {
     jsonData = incomingData;
     dropDownData = incomingData.names;
     dropDownData.forEach(element => {
