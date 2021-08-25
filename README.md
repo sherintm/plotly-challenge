@@ -6,9 +6,9 @@ The dashboard is deployed at https://sherintm.github.io/plotly-challenge/
 It has the following information for the individual selected from the dropdown.
 <ul>
 <li>Demographic information of the selected individual</li>
-<li>Horizontal bar chart to display the top 10 OTUs found in that individual.</li>
-<li>Bubble chart to show the sample information.</li>
-<li>Gauge chart to plot the weekly washing frequency of the individual.</li>
+<li>Horizontal bar chart to display the top 10 OTUs found in that individual</li>
+<li>Bubble chart to show the sample information</li>
+<li>Gauge chart to plot the weekly washing frequency of the individual</li>
 </ul>
 
 Dashboard looks as following for a selected individual:
